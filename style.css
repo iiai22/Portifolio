@@ -122,3 +122,8 @@ header {
     background: var(--bg-color);
 
 }
+
+#myCanvas {
+    width: 100%;
+    height: 100%;
+}

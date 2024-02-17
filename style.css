@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+
+:root {
+    --bg-color:#222;
+    --text-color:#f8f8ec;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/*.color1 { color:#8ba6ac;}
+.color2 { color:#d7d7b8;}
+.color3 { color:#e5e6c9;}
+.color4 { color:#f8f8ec;}
+.color5 { color:#bdcdd0;}*/
+
+/*--HEADER--*/
+h1, li, a, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    color: var(--text-color);
+    /*background: var(--bg-color);*/
+    text-decoration: none;
+}
+
+button {
+    margin-left: 20px;
+    cursor: pointer;
+    outline: 0;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 4px 8px;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: var(--text-color);
+    border-color: var(--text-color);
+}
+
+button:hover {
+    color: var(--bg-color);
+    background-color: var(--text-color);
+    border-color: var(--text-color);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-right: auto;
+}
+
+header {
+    z-index: 10;
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    cursor: default;
+    background: -webkit-linear-gradient(top, 
+    rgba(0,0,0,0.6) 0%, 
+    rgba(0,0,0,0) 80%
+  );
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+    position: relative;
+}
+
+.nav_links li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: var(--text-color);
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.nav_links li a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/*--MAIN--*/
+.inicio {
+    height: 80vh;
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sobre_mim {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg-color);
+
+}

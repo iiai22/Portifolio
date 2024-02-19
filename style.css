@@ -3,6 +3,8 @@
 :root {
     --bg-color:#1f192f;
     --text-color:#f8f8ec;
+    --scroll-color:#da7421;
+    --dark-color:#222;
 }
 
 * {
@@ -55,10 +57,24 @@ button:hover {
 
 .logo {
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 900;
     text-transform: uppercase;
     cursor: pointer;
     margin-right: auto;
+}
+
+.spc {
+    margin-right: 10px;
+}
+
+.name{
+    font-size: 20px;
+    font-weight: 600;
+    transition: color 0.2s ease-out;
+}
+
+.name:hover {
+    color: var(--scroll-color);
 }
 
 header {
@@ -110,16 +126,86 @@ header {
 }
 
 /*--MAIN--*/
+
 .inicio {
     height: 80vh;
     background-image: url(bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 .sobre_mim {
     position: relative;
     width: 100vw;
     height: 100vh;
-    /*background: var(--bg-color);*/
+    background: var(--bg-color);
 
 }
+
+.img_box {
+    width: clamp(300px, 20%, 500px);
+    height: clamp(200px, 40%, 500px);
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.pfp {
+    border: solid 4px var(--bg-color);
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    transition: border 0.2s ease-in-out;
+}
+
+.pfp:hover {
+    border: solid 5px var(--text-color);
+}
+
+.faixa {
+    background: var(--text-color);
+    width: 100vw;
+    height: 15vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.grau_holder {
+    background: var(--dark-color);
+    height: 100%;
+    width: 25vw;
+    transform: translateX(270%);
+    display: flex;
+    justify-content: space-around;
+}
+
+.grau {
+    background: #fffffb;
+    height: 100%;
+    width: 3vw;
+}
+
+/*----------Scroll----------*/
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--bg-color);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--scroll-color);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 199, 156);
+  }
+  
